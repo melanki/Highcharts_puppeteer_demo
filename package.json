@@ -1,0 +1,29 @@
+{
+  "name": "puppeteer_export_server",
+  "version": "1.0.0",
+  "description": "Example of using Puppeteer to save Highcharts to PDF",
+  "main": "example.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melanki/Highcharts_puppeteer_demo.git"
+  },
+  "keywords": [
+    "Highcharts",
+    "Puppeteer"
+  ],
+  "author": "Marensius Pettersen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melanki/Highcharts_puppeteer_demo/issues"
+  },
+  "homepage": "https://github.com/melanki/Highcharts_puppeteer_demo#readme",
+  "dependencies": {
+    "puppeteer": "^5.5.0"
+  }
+}
