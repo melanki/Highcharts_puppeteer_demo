@@ -4,9 +4,12 @@
  * within this script.
  */
 const puppeteer = require('puppeteer')
+const htpt = require('http')
 const fs = require('fs')
 
 async function run() {
+
+
 
     const browser = await puppeteer.launch({
         headless: true
@@ -24,24 +27,12 @@ async function run() {
         waitUntil: 'load'
     })
 
-    const html =
-        `<!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Highcharts Test 4</title>
-        </head>
-        <body>
-        <div id="container" style="width:100%; height:400px;"></div>
-        </body>
-        </html>`
+    const html = fs.readFileSync('template.html')
 
-    await page.setContent(html)
+    await page.setContent(html.toString())
     await loaded
 
     async function loadChart() {
-
-        page.evaluate(fs.readFileSync('./lib/highcharts/highcharts.js', 'utf8'));
 
         await page.evaluate(async (fs) => {
 
